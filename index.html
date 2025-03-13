@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+</style>
+<body>
+    <h1>Teachable Machine</h1>
+
+    <div>
+        <label>Class 1 Name:</label>
+        <input type="text" id="class1-name" placeholder="e.g. Cat">
+        <input type="file" id="class1-files" multiple accept="image/*">
+    </div>
+
+    <div>
+        <label>Class 2 Name:</label>
+        <input type="text" id="class2-name" placeholder="e.g. Dog">
+        <input type="file" id="class2-files" multiple accept="image/*">
+    </div>
+
+    <button id="train-btn">Train Model</button>
+    <p id="status"></p>
+
+    <h2>Test Model</h2>
+    <input type="file" id="test-image" accept="image/*">
+    <button id="predict-btn">Predict</button>
+    <p id="prediction"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js"></script>
+</body>
+</html>
